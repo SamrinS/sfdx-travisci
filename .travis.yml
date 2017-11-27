@@ -13,8 +13,7 @@ before_install:
 - sfdx update
 - sfdx --version
 - sfdx plugins --core
-- sfdx force:auth:jwt:grant --clientid 3MVG9d8..z.hDcPJWbxx92t.5tb5JnAHXzOcvzNvnhrvuoeK.YUM7c33hB.2.Oc_oTsKD4_BlRVuzaOJLBWsx --jwtkeyfile assets/server.key
-  --username samrin@sfdx.com --setdefaultdevhubusername -a myTPO
+- sfdx force:auth:jwt:grant --clientid 3MVG9d8..z.hDcPJWbxx92t.5tb5JnAHXzOcvzNvnhrvuoeK.YUM7c33hB.2.Oc_oTsKD4_BlRVuzaOJLBWsx --jwtkeyfile D:/sfdx-travisci/assets/server.key --username samrin@sfdx.com --setdefaultdevhubusername -a myTPO
 script:
 - sfdx force:org:create -v myTPO -s -f config/project-scratch-def.json -a ciorg
 - sfdx force:source:push -u ciorg
